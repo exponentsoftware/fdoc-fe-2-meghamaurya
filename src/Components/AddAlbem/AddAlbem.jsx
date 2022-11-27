@@ -6,12 +6,28 @@ const AddAlbem = () => {
   const [artist, setArtist] = useState("");
   const [addCover, setAddCover] = useState("");
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    const albems = [
+      {
+        id: "1",
+        artist: "A. R. Rehman",
+        albem: "",
+        cover: "",
+      },
+    ];
+  };
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="ablem_title">Albem Title</label>
-        <input value={addAlbem} onChange={(e) => setAddAlbem(e.target.value)} />
+        <input
+          type="text"
+          name="title"
+          required="required"
+          placeholder="Enter a title"
+          value={addAlbem}
+          onChange={(e) => setAddAlbem(e.target.value)}
+        />
         <label htmlFor="artist">Artist</label>
         <input value={artist} onChange={(e) => setArtist(e.target.value)} />
         <label htmlFor="albem_cover">upload Albem Cover</label>
